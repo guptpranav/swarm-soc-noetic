@@ -1,0 +1,4 @@
+/.vscode
+/permissions.sh
+/noetic_ws/build
+/noetic_ws/devel
