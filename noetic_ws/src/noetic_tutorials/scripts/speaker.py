@@ -7,7 +7,7 @@ from std_msgs.msg import String     # import type of message to be published
 def publisher():
     
     # initialize Publisher object from rospy that will publish 'std_msg.msg/String' type to topic '/audience' 
-    pub = rospy.Publisher('/audience', String, queue_size=10)
+    pub = rospy.Publisher('audience', String, queue_size=10)
     # initialize anonymous (uniquely named) publishing node
     rospy.init_node('speaker', anonymous=True)
     # defining rate of publishing in Hertz

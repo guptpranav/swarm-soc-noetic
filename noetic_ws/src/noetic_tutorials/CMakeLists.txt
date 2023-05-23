@@ -68,10 +68,10 @@ add_service_files(
 # )
 
 ## Generate added messages and services with any dependencies listed here
-generate_messages(
-  DEPENDENCIES
-  std_msgs
-)
+# generate_messages(
+#   DEPENDENCIES
+#   std_msgs
+# )
 
 ################################################
 ## Declare ROS dynamic reconfigure parameters ##
@@ -163,8 +163,8 @@ catkin_install_python(PROGRAMS
   scripts/speaker.py
   scripts/listener.py
   scripts/convertor.py
-  scripts/client.py
-  scripts/server.py
+  scripts/autopose.py
+  scripts/navigator.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

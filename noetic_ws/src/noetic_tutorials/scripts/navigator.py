@@ -3,6 +3,7 @@
 import rospy
 from noetic_tutorials.srv import Fibonacci, FibonacciResponse
 
+
 def fibonacci_server(request):
     # sleeping for 5.0s as per assignment requirements
     rospy.sleep(5.0)

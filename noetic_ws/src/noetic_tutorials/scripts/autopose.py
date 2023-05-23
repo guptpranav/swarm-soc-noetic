@@ -2,14 +2,15 @@
 
 import rospy
 from noetic_tutorials.srv import Fibonacci, FibonacciResponse
+from std_msgs.msg import Int64
 
-def fibonacci_client(index):
-    # initializing 'navigator' client node
-    rospy.init_node('navigator', anonymous=False)
+
+def fibonacci_client(data):
     # waiting for 'fibonaccifier' service server to spawn in ROS master
+    index = data.data
     rospy.wait_for_service('fibonaccifier')
     
-    while not rospy.is_shutdown():
+    if index is not None:
         try:
             # initializing 'fibonaccifier' service server caller
             fibonaccify = rospy.ServiceProxy('fibonaccifier', Fibonacci)
@@ -19,8 +20,14 @@ def fibonacci_client(index):
         except rospy.ServiceException:
             print('service call failed')
 
+def main():
+    # initializing 'navigator' client node
+    rospy.init_node('navigator', anonymous=False)
+    rospy.Subscriber('fiboard', Int64, fibonacci_client)
+    rospy.spin()
+
 if __name__ == "__main__":
     try:
-        fibonacci_client(12)
+        main()
     except rospy.ROSInterruptException:
         pass
