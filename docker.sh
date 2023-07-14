@@ -26,4 +26,4 @@ sudo docker run \
   --runtime=nvidia -e NVIDIA_VISIBLE_DEVICES=all -e NVIDIA_DRIVER_CAPABILITIES=compute,utility\
   --device /dev/fuse \
   --cap-add SYS_ADMIN \
-  umic-tools:controls
+  <image_name>:<tag>
