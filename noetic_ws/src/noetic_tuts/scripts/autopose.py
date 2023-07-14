@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import rospy
-from noetic_tutorials.srv import Fibonacci, FibonacciResponse
+from noetic_tuts.srv import Fibonacci, FibonacciResponse
 from std_msgs.msg import Int64
 
 

@@ -2,7 +2,7 @@
 
 import math
 import rospy
-from noetic_tutorials.msg import Euler, Quaternion
+from noetic_tuts.msg import Euler, Quaternion
 
 def convert(quat):
     w = quat.q0
@@ -37,4 +37,3 @@ if __name__ == "__main__":
         main()
     except rospy.ROSInterruptException:
         pass
-

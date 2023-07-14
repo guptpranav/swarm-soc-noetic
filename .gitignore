@@ -2,3 +2,6 @@
 /permissions.sh
 /noetic_ws/build
 /noetic_ws/devel
+/Unity*
+/ROS-TCP-Endpoint
+/ros_packages
