@@ -7,4 +7,5 @@ Make 2 nodes(programs) :-
 Constraints :- No global variables, temporary clients
 
 ### Submission 1
-relevant scripts are `autopose.py` and `navigator.py` along with relevant Fibonacci.srv
+scripts are `autopose.py` and `navigator.py` using custom srv Fibonacci.srv
+/build and /devel have not been included, run `$ catkin_make` in noetic_ws to build the package
